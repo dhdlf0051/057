@@ -1,0 +1,11 @@
+public interface CoinGeckoAPI {
+    @GET("/api/v3/coins/markets?vs_currency=usd&order=volume_desc&per_page=3&page=1&sparkline=false")
+    Call<List<CoinMarket>> getTopCoins();
+}
+
+public class CoinMarket {
+    private String id;
+    private double current_price;
+
+    // getters and setters
+}
